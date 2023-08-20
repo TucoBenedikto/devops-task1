@@ -1,0 +1,35 @@
+Создаем ветки 
+git branch develop
+git checkout -b feature/new-site 
+
+Изменяем файлы 
+commit 6868b5062dcdc2dc6a2e9d6e1d945f9b4b0be17a
+Author: Ivan Shilkin <ivanshilkin55@gmail.com>
+Date:   Sun Aug 20 15:54:03 2023 +0000
+
+    worker_connections_16384
+
+commit 82bca769ddef0397f25d5743fcc9706c621a3725 (origin/main, origin/HEAD, main)
+Author: ivan.shylkin@innowise-group.com <ivan.shylkin@innowise-group.com>
+Date:   Sun Aug 20 15:51:56 2023 +0000
+
+    Delete nginx.conf
+
+
+Создали папку conf.d и файл mysite.domain.com.conf и добавили tag v0.1
+
+
+
+qqcommit b633d166597f2ee71c34c2a408a608f0648ee121 (tag: v0.1)
+Author: Ivan Shilkin <ivanshilkin55@gmail.com>
+Date:   Sun Aug 20 16:00:55 2023 +0000
+
+    default_website
+
+Добавили файл .gitognore и вписали в него папку tmp
+Создали папку tmp c файлами 1.txt 2.txt 
+mkdir tmp
+touch 1.txt
+touch 2.txt
+
+Далее делаем git push и проверяем работу .gitignore 
