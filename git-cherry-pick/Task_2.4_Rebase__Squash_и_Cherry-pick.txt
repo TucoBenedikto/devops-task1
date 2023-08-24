@@ -1,0 +1,52 @@
+1.Клонировать репозиторий: git-rebase. Переместить коммиты из ветки feature в ветку develop с помощью rebase. 
+Переместить коммиты из ветки develop в ветку master с помощью rebase. Создай репозиторий в своем аккаунте и загрузи в него получившийся локальный репозиторий. 
+
+
+git clone ssh://git@devops-gitlab.inno.ws:54042/devops-board/git-rebase.git
+git branch -a
+git checkout master 
+git rebase develop 
+git checkout master
+git rebase develop 
+git pull ssh://git@devops-gitlab.inno.ws:54042/ilyas-trainees/ivan-shylkin/git.git --rebase
+git push -f ssh://git@devops-gitlab.inno.ws:54042/ilyas-trainees/ivan-shylkin/git.git
+
+
+
+2.Клонируй репозиторий: git-squash. 
+Просмотри историю коммитов в ветке develop. 
+Объедини все FIX-коммиты c родительским (Simplified sum function) в один коммит. 
+Создай репозиторий в своем аккаунте и загрузите в него получившийся репозиторий.
+
+
+git clone ssh://git@devops-gitlab.inno.ws:54042/git-moodle-cource/git-squash.git
+git checkout develop
+git log --oneline
+git rebase -i HEAD~5 
+git log
+commit 7189f47a7eea8a4143ead1f8077a71ed2a871698 (HEAD -> develop)
+Author: Vasiliy I Ozerov <vasiliyozerov@gmail.com>
+Date:   Wed Jan 9 02:18:46 2019 +0300
+
+    Simplified sum function "fiX5"
+    
+    Fix #1
+    
+    Fix #2
+    
+    Fix #3
+    
+    Fix #4
+    
+    Fix #5 Final!!!
+git push -f ssh://git@devops-gitlab.inno.ws:54042/ilyas-trainees/ivan-shylkin/git.git
+
+
+
+3.
+git clone ssh://git@devops-gitlab.inno.ws:54042/devops-board/git-cherry-pick.git
+git checkout master
+git cherry-pick bf38ea12
+git add main.go
+git cherry-pick --continue
+git push -f ssh://git@devops-gitlab.inno.ws:54042/ilyas-trainees/ivan-shylkin/git.
